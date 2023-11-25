@@ -7,7 +7,7 @@ const Navbar = () => {
     
       <nav className="h-20">
         <div className="flex flex-wrap items-center justify-between py-[10px] px-[40px]">
-          <a href="" className="flex items-center">
+          <a href="/" className="flex items-center">
               <img src={logo} className="w-[60px] rounded-full" alt="Flowbite Logo" />
           </a>
           <button type="button" className="flex justify-center items-center bg-button w-40 h-10">

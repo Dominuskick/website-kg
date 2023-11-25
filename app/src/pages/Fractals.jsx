@@ -41,8 +41,8 @@ const SierpinskiTriangle = React.memo(({ x, y, size, depth }) => {
 
 
   return (
-    <div id="fractal-container">
-      <Stage width={1500} height={800}>
+    <div id="fractal-container-triangle">
+      <Stage width={1500} height={900}>
         <Layer>{createSierpinskiTriangle}</Layer>
       </Stage>
     </div>
@@ -66,7 +66,7 @@ const Fractals = () => {
 
 const saveFractal = () => {
     // Вибираємо контейнер, який потрібно зберегти у вигляді зображення
-    const container = document.getElementById('fractal-container');
+    const container = document.getElementById('fractal-container-triangle');
     
     // Використовуємо html2canvas для збереження контейнера у вигляді зображення
     html2canvas(container).then((canvas) => {
@@ -83,15 +83,16 @@ const saveFractal = () => {
   };
 
   return (
-    <div className={`h-[950px] ${styles.flexStart} ${styles.boxWidth}`}>
+    <div className={`h-[1070px] ${styles.flexStart} ${styles.boxWidth}`}>
       <div>
         <Sidebar
-          depth={depth} // Передаємо color у Sidebar
+          depth={depth}
           updateDepth={updateDepth}
           saveFractal={saveFractal}
+          page='triangle'
         />
       </div>
-      <div className={`${styles.flexCenter}`}>
+      <div className={`${styles.flexCenter} w-[1920px] h-[900px]`}>
         <SierpinskiTriangle x={x} y={y} size={size} depth={depth} />
       </div>
     </div>

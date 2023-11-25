@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Fractals from "./pages/Fractals.jsx";
 import Fractals_zsinz from "./pages/Fractal_zsinz.jsx";
+import Converter from "./pages/Converter.jsx";
 
 const App = () => {
 
@@ -21,15 +22,21 @@ const App = () => {
         <div className={`${styles.flexCenter} bg-secondary flex-col`}>
           <Routes>
             <Route
-              path="/fractals-serpinsky"
+              path="/fractal-serpinsky"
               element={
                 <Fractals/>
               }
             />
             <Route
-              path="/fractals-zsinz"
+              path="/fractal-zsinz"
               element={
                 <Fractals_zsinz/>
+              }
+            />
+             <Route
+              path="/converter"
+              element={
+                <Converter/>
               }
             />
             <Route path="/" element={<HomePage />} exact />

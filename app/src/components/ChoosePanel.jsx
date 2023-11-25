@@ -6,8 +6,8 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const ChoosePanel = () => {
   return (
-    <div className='flex md:flex-row flex-col space-x-[70px] items-center justify-center h-[450px]'>  
-        <Button text="Fractals" to='/fractals'/>
+    <div className='flex md:flex-row flex-col space-x-[70px] items-center justify-center h-[570px]'>  
+        <Button text="Fractals" to='/fractal-serpinsky'/>
         <Button text="Color scheme"/>
         <Button text="Rotating figures"/>
     </div>
